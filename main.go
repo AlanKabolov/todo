@@ -4,7 +4,6 @@ import (
 	"log"
 	"todo-api-v2/database"
 	"todo-api-v2/handlers"
-
 	"github.com/gofiber/fiber/v2"
 )
 

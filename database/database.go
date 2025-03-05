@@ -3,6 +3,7 @@ package database
 import (
 	"context"
 	"fmt"
+
 	"github.com/jackc/pgx/v4/pgxpool"
 )
 
@@ -20,7 +21,6 @@ func InitDB(connString string) error {
 		return fmt.Errorf("failed to connect to database: %w", err)
 	}
 
-	// Создание таблицы tasks, если она не существует
 	query := `
 		CREATE TABLE IF NOT EXISTS tasks (
 			id SERIAL PRIMARY KEY,
